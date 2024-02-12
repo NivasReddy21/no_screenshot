@@ -44,11 +44,11 @@ public class SwiftNoScreenshotPlugin: NSObject, FlutterPlugin {
 
     public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
         if (call.method == "screenshotOff") {
-            SwiftNoScreenshotPlugin.preventScreenShot = false
+            SwiftNoScreenshotPlugin.preventScreenShot = true
             shotOff()
 
         } else if (call.method == "screenshotOn") {
-            SwiftNoScreenshotPlugin.preventScreenShot = true
+            SwiftNoScreenshotPlugin.preventScreenShot = false
             shotOn()
         } else if (call.method == "toggleScreenshot") {
             SwiftNoScreenshotPlugin.preventScreenShot = !SwiftNoScreenshotPlugin.preventScreenShot;
